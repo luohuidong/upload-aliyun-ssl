@@ -23,7 +23,7 @@
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@tsconfig/recommended": "^1.0.7",
-    "@types/node": "^20.15.0",
+    "@types/node": "^20.16.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.9.0",
@@ -32,5 +32,13 @@
     "typedoc": "^0.26.5",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.1.0"
+  },
+  "dependencies": {
+    "@alicloud/cas20200407": "^1.2.0",
+    "@alicloud/cdn20180510": "^4.0.0",
+    "@alicloud/openapi-client": "^0.4.11",
+    "dotenv": "^16.4.5",
+    "yaml": "^2.5.0",
+    "zod": "^3.23.8"
   }
 }
