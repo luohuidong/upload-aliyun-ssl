@@ -8,5 +8,5 @@
 2. `npm run build`
 3. 在 https://ram.console.aliyun.com/users 生成好 access key id 跟 access key secret。并对 RAM 用户授权管理云盾证书服务的权限、管理CDN的权限。
 4. `cp .env.example .env`，将生成的 access key id 跟 access key secret 填入 .env 文件中。
-5. 根据实际情况，修改根目录 config.yml 文件中的内容。
+5. `cp config.yml.example config.yml`，根据实际情况，修改根目录 config.yml 文件中的内容。
 6. `node dist/index.js`，根据自己所使用的 acme 客户端搭配证书更新的 hook 来执行 ssl 证书上传
