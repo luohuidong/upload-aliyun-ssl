@@ -1,11 +1,13 @@
 node_modules
 tmp
-.env
 
 dist
 types
 doc
 coverage
+
+.env
+config.yml
 
 # Editor directories and files
 .vscode/*
