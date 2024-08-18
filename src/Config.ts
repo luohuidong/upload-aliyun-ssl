@@ -8,6 +8,7 @@ interface ConfigI {
   accessKeySecret: string;
   certFilePath: string;
   keyFilePath: string;
+  cdnDomainNames: string[];
 }
 
 export default class Config {
@@ -31,6 +32,7 @@ export default class Config {
       accessKeySecret: z.string(),
       certFilePath: z.string(),
       keyFilePath: z.string(),
+      cdnDomainNames: z.array(z.string()),
     });
 
     return configSchema.parse(config);
