@@ -1,45 +1,12 @@
-# Node TypeScript Template
+# AliCloud SSL Uploader
 
-- [x] TypeScript
-- [ ] CommitLint
-- [x] Commitizen
-- [x] ESLint
-- [x] Prettier
-- [x] TypeDoc
+主要功能是将 acme.sh、cerbot 等 acme 客户端生成的泛域名证书上传到阿里云，同时更新配置 CDN 和 OSS 的 ssl 配置。
 
-## Scaffolding your node project
+使用：
 
-With NPM:
-
-```bash
-npm create @app-template/app@latest my-node-project -- --template node
-```
-
-With PNPM:
-
-```bash
-pnpm create @app-template/app@latest my-node-project --template node
-```
-
-## How to use
-
-### Development
-
-```bash
-pnpm dev
-```
-
-### Production
-
-```bash
-pnpm build
-```
-
-### Testing
-
-Before running tests, make sure you have built the project.
-
-```bash
-pnpm dev # or pnpm build
-pnpm test # or pnpm test:watch
-```
+1. `npm install`
+2. `npm run build`
+3. 在 https://ram.console.aliyun.com/users 生成好 access key id 跟 access key secret。并对 RAM 用户授权管理云盾证书服务的权限、管理CDN的权限。
+4. `cp .env.example .env`，将生成的 access key id 跟 access key secret 填入 .env 文件中。
+5. 根据实际情况，修改根目录 config.yml 文件中的内容。
+6. `node dist/index.js`，根据自己所使用的 acme 客户端搭配证书更新的 hook 来执行 ssl 证书上传
